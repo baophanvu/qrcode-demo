@@ -8,36 +8,36 @@ import {QrScannerComponent} from 'angular2-qrscanner';
 })
 export class AppComponent {
   title = 'app';
-  cameraStarted = false;
-    qrResult: string;
-    selectedDevice: any;
-    availableDevices: object = [];
+  cameraStarted:boolean = false;
+  qrResult: string;
+  selectedDevice: any;
+  availableDevices: object = [];
 
-    displayCameras(cameras: object[]) {
+  displayCameras(cameras: object[]) {
 
-        console.log('Devices: ', cameras);
+      console.log('Devices: ', cameras);
 
-        this.availableDevices = cameras;
+      this.availableDevices = cameras;
 
-        if (cameras && cameras.length > 0) {
-            this.selectedDevice = cameras[0];
-            this.cameraStarted = true;
-        }
-    }
+      if (cameras && cameras.length > 0) {
+          this.selectedDevice = cameras[0];
+          this.cameraStarted = true;
+      }
+  }
 
-    handleQrCodeResult(result: string) {
+  handleQrCodeResult(result: string) {
 
-        console.log('Result: ', result);
-      
-        this.qrResult = result;
-    }
+      console.log('Result: ', result);
+    
+      this.qrResult = result;
+  }
 
-    onChange(selectedValue: string) {
+  onChange(selectedValue: string) {
 
-        console.log('Selection changed: ', selectedValue);
+      console.log('Selection changed: ', selectedValue);
 
-        this.cameraStarted = false;
-        this.selectedDevice = selectedValue;
-        this.cameraStarted = true;
-    }
+      this.cameraStarted = false;
+      this.selectedDevice = selectedValue;
+      this.cameraStarted = true;
+  }
 }

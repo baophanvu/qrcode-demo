@@ -18,6 +18,9 @@
   </li>
 </ul>
 <h2>Scan QR</h2>
+<select (change)="onChange($event.target.value)">
+  <option *ngFor="let device of availableDevices" [value]="device.deviceId">{{ device.label }}</option>
+</select>
 <ngx-zxing
     [start]="cameraStarted"
     [device]="selectedDevice"

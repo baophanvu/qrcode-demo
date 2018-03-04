@@ -6,37 +6,38 @@ import {QrScannerComponent} from 'angular2-qrscanner';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent {
   title = 'app';
-  @ViewChild(QrScannerComponent) qrScannerComponent: QrScannerComponent ;
+  cameraStarted = false;
+    qrResult: string;
+    selectedDevice: any;
+    availableDevices: object = [];
 
-  ngOnInit() {
-      this.qrScannerComponent.getMediaDevices().then(devices => {
-          console.log(devices);
-          const videoDevices: MediaDeviceInfo[] = [];
-          for (const device of devices) {
-              if (device.kind.toString() === 'videoinput') {
-                  videoDevices.push(device);
-              }
-          }
-          if (videoDevices.length > 0){
-              let choosenDev;
-              for (const dev of videoDevices){
-                  if (dev.label.includes('front')){
-                      choosenDev = dev;
-                      break;
-                  }
-              }
-              if (choosenDev) {
-                  this.qrScannerComponent.chooseCamera.next(choosenDev);
-              } else {
-                  this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
-              }
-          }
-      });
+    displayCameras(cameras: object[]) {
 
-      this.qrScannerComponent.capturedQr.subscribe(result => {
-          console.log(result);
-      });
-  }
+        console.log('Devices: ', cameras);
+
+        this.availableDevices = cameras;
+
+        if (cameras && cameras.length > 0) {
+            this.selectedDevice = cameras[0];
+            this.cameraStarted = true;
+        }
+    }
+
+    handleQrCodeResult(result: string) {
+
+        console.log('Result: ', result);
+      
+        this.qrResult = result;
+    }
+
+    onChange(selectedValue: string) {
+
+        console.log('Selection changed: ', selectedValue);
+
+        this.cameraStarted = false;
+        this.selectedDevice = selectedValue;
+        this.cameraStarted = true;
+    }
 }

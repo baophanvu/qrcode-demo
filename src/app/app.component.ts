@@ -16,7 +16,7 @@ export class AppComponent {
     qrResultString: string;
     qrResult: Result;
     scannerEnabled = true;
-    title = 'Khoa QR Scan App'
+    title = 'Khoa QR Scan App';
 
     availableDevices: MediaDeviceInfo[];
     selectedDevice: MediaDeviceInfo;

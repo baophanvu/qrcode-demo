@@ -64,6 +64,6 @@ export class QRComponent {
     goToQAComponent() {
        window.location.href = '/qa';
     }
-    
-    onChange(){}
+
+    onChange(event){}
 }

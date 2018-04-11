@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { QRComponent } from './qr.component';
 import {ZXingScannerModule} from '@zxing/ngx-scanner';
+
 import { AppComponent} from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import {QAComponent} from './qa/qa.component';

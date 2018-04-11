@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 import Result from '@zxing/library/esm5/core/Result';
 import { log } from 'util';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'qr-component',
@@ -21,8 +22,9 @@ export class QRComponent {
 
     availableDevices: MediaDeviceInfo[];
     selectedDevice: MediaDeviceInfo;
-    router;
-
+    
+    constructor(private router: Router) { 
+    }
     ngOnInit(): void {
         this.scanner.camerasFound.subscribe((devices: MediaDeviceInfo[]) => {
             this.hasCameras = true;
@@ -62,7 +64,7 @@ export class QRComponent {
     }
 
     goToQAComponent() {
-       window.location.href = '/qa';
+       this.router.navigateByUrl('/qa');
     }
 
     onChange(event){}

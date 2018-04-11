@@ -1,0 +1,36 @@
+.h4-custom {
+    color: #29A9E1;
+    font-weight: 600;
+    margin-left: 3%; 
+}
+.question-content {
+    color : white;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-weight: 400;
+}
+.answer {
+    border-color: white;
+    width : 94% !important;
+    margin-left: 3%; 
+    margin-bottom: 10px;
+    color : #29A9E1;
+    text-align: left;
+}
+.question {
+    min-height: 100px !important;
+}
+.qa-container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.info {
+    font-size: larger;
+    font-weight: 500;
+}
+.modal {
+    background-image: '/images/back-ground/fireworks-1.jpg';
+}
+.default-countdown-timer {
+    margin-bottom: 0px;
+}

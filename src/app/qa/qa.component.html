@@ -1,0 +1,292 @@
+<div class="qa-container">
+    <div class="row" style="background-color: #F0F0F0;">
+
+        <div class="col-9">
+            <h4 class="h4-custom">Question</h4>
+        </div>
+        <!-- <div style="float: right;">
+            <app-count-down [time]="'10'" [object]="'2'" (onStart)="onStartFunc($event)" (onComplete)="onCompleteFunc($event)"
+                [singleFormat]="'mm:ss'" [selectedtheme]="'default'"></app-count-down>
+        </div> -->
+    </div>
+
+    <div *ngIf="num == 2" class="">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                    <h5 class="question-content">2. CptM stands for ?</h5>
+                </div>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    Certified professional training management
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    Competence management
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    Cross point training management
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="num == 3">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    3. Strategic competencies (Top5-CptM) is a ______ process where ______ defines range of use and associate target group.
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    a. top down, GB
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    b. top down, head of department
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    c. bottom up, managers
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    d. HR, HR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="num == 4">
+            <div class="content-part">
+                <div class="row question" style="background-color: #29A9E1;">
+                    <h5 class="question-content">
+                        4. This is QR code question, please click <a (click)="getQRCodeQuestion()">QR Code</a> to get the question.
+                    </h5>
+                </div>
+            </div>
+    </div>
+
+    <div *ngIf="num == 5">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    5. Competence standards (Training-CptM) is a curricula defined by Corporate, GB and or Regional setting owners.
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    a. True
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    b. False
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="num == 6">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    6. There are ____ areas of competence in Bosch Competence Model, based on our mission statement "We are Bosch". (QR code
+                    to be placed at Foyer, near our mission statement)
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    a. 10
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    b. 8
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    c. 6
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    d. 4
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- QR code 2 -->
+    <div *ngIf="num == 7">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    1.	Robert Bosch once said "A company which, like mine, strives for perfection must in 
+                    its own interests make great efforts to train its people. In certain respects, 
+                    anyone who wants to produce good work as a company must - whether they want to or not -
+                    also perform the role of educator in the positive sense of the word, 
+                    and hence for the good of the economy as a whole.”
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    a.	True
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    b. False
+                </button>
+            </div>
+            
+        </div>
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    What do you think associate development meant at Bosch?
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;margin-left: 0px;">
+                <textarea rows="3" cols="20" style="height: 55px;" placeholder="Type your comment!"></textarea>
+            </div>
+            <br />
+            <br />
+
+        </div>
+    </div>
+    <div *ngIf="num == 8">
+        <div class="content-part">
+            <div class="row question" style="background-color: #29A9E1;">
+                <h5 class="question-content">
+                    2.	Career Advancement Discussion (CAD) is a tool that allows Talent Pool members to seek 
+                    detailed feedback on their strengths and development opportunities, career aspiration 
+                    and possible next steps with HR, manager and next level manager.
+                </h5>
+            </div>
+        </div>
+        <div class="content-part">
+            <div class="row" style="margin-top: 10px;">
+                <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    a.	True
+                </button>
+            </div>
+            <div class="row">
+                <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                    <i class="fa fa-circle"></i>
+                    b. False
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    <div *ngIf="num == 9">
+            <div class="content-part">
+                <div class="row question" style="background-color: #29A9E1;">
+                    <h5 class="question-content">
+                        3.	Specialist, Project Leadership and Line Leadership is the _______ in Bosch.
+                    </h5>
+                </div>
+            </div>
+            <div class="content-part">
+                <div class="row" style="margin-top: 10px;">
+                    <button type="button" class="btn-lg answer" (click)="wrongAnswerClick(content)">
+                        <i class="fa fa-circle"></i>
+                        a.	career path track
+                    </button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn-lg answer" (click)="rightAnswerClick(content)">
+                        <i class="fa fa-circle"></i>
+                        b.	specialization
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+    <!-- <img src="../../content/images/back-ground/fireworks-1.jpeg"> -->
+
+
+    <br/>
+    <br />
+
+
+</div>
+
+
+<!-- modal here -->
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center info">
+                {{modal_content}}
+            </div>
+        </div>
+    </div> 
+    <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button> -->
+        <div class="row justify-content-center">
+            <button *ngIf="result == true" type="button" class="btn btn-secondary" (click)="c('Close click'); onClickNext(true) ">
+                Next question!
+            </button>
+            <button *ngIf="result == false" type="button" class="btn btn-secondary" (click)="c('Close click')">
+                Try again!
+            </button>
+        </div>
+    </div>
+</ng-template>
+
+
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{closeResult}}</pre> -->

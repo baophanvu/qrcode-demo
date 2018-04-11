@@ -16,6 +16,7 @@ export class QRComponent {
     qrResultString: string;
     qrResult: Result;
     scannerEnabled = true;
+    autofocusEnabled = true;
     title = 'QR Scan App';
 
     availableDevices: MediaDeviceInfo[];
@@ -63,4 +64,6 @@ export class QRComponent {
     goToQAComponent() {
        window.location.href = '/qa';
     }
+    
+    onChange(){}
 }

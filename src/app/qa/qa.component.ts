@@ -9,7 +9,7 @@ import { NgbModal , ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
     ]
 })
 export class QAComponent {
-    num = 6;
+    num = 2;
     closeResult: string;
     modal_content: string;
     result: boolean;
@@ -45,16 +45,15 @@ export class QAComponent {
         this.modal_content = 'You are correct!';
         this.result = true;
         // this.hasAudio = true;
-        this.modalService.open(content, { windowClass: 'custom-class' });
-        // eval("window.document.getElementsByTagName('ngb-modal-backdrop')[0].style.backgroundColor = 'blue'");
-        // eval("window.document.getElementsByTagName('ngb-modal-backdrop')[0].style.backgroundImage = 'url('http://www.fnordware.com/superpng/pnggrad16rgb.png')'");
+        this.modalService.open(content, { windowClass: 'woman-right-background' });
     }
 
     wrongAnswerClick(content) {
         this.modal_content = 'You are wrong!';
         this.result = false;
         // this.hasAudio = false;
-        this.modalService.open(content);
+        this.modalService.open(content, { windowClass: 'woman-wrong-background' });
+        // this.modalService.open(content);
     }
 
     onClickNext(isNext: boolean) {

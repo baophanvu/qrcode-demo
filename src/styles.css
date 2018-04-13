@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.woman-right-background {
+    /* background-image: url('/images/man-right.png'); */
+    background-image: url('/images/woman-right.png');
+    background-size: 100%;
+}
+.woman-wrong-background {
+    background-image: url('/images/woman-wrong.png');
+    background-size: 100%;
+}
+/* .modal-dialog {
+    margin: 7%;
+    margin-top: 28%;
+    width: 54%;
+} */
+.modal-dialog {
+    margin: 5%;
+    margin-top: 28%;
+    width: 56%;
+}
